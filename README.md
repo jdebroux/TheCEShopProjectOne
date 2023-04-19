@@ -1,5 +1,11 @@
 # The CE Shop interview Project #1
 
+## Clarifying Questions
+- Do we want to support users taking the same course multiple times?
+  - If so, when a user wants to see their current course progress, should we return all results for that users progresses for that course?
+    - I have set up my design to support the potential for a user working on the same course multiple times.  If this is not needed the user_progress table could be refactored   
+- How do we want to display this number to the user?  4/10 is a simple percentage, but what happens when its 7/25?
+
 ## Design Approach
 - Create a new table in the database called user_progress to store user progress related data.  This table will be an association table connecting the user and course tables.
 - In the user_progress table, we will store user_id, course_id, and completed_questions.
@@ -35,3 +41,4 @@ Display the progress percentage to the user.
 
 ## Conclusion
 - In this high-level solution, I have proposed adding a new table to store user progress related data, creating a Java backend endpoint to get the course progress percentage, using AngularJS in the front-end to display the progress percentage to the user. I have also provided a quick database EER example, example Java code, and example Javascript code snippets to help implement this feature. This approach provides a scalable and efficient solution for tracking and displaying progress to students.
+
